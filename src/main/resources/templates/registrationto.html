@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="../static/css/registration.css" media="screen" th:href="@{/css/registration.css}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>PerChill</title>
+
+    <meta name="_csrf" content="${_csrf.token}" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.parameterName}" th:content="${_csrf.parameterName}"/>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/registrationto.js"></script>
+
+</head>
+<body ng-app="reg" ng-controller="RegistrationController">
+<header class="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo">
+                <a class="header_link" href="#">PerChill</a>
+            </div>
+            <nav class="nav">
+                <a class="header_link" href="#">Профиль</a>
+                <a class="header_link" href="#">Язык</a>
+                <a class="header_link" href="#">Другое</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro_inner">
+            <h1 class="find_title">Регистрация</h1>
+            <div class="main">
+                <h2 class="reg_title">Выберите тип аккаунта:</h2>
+                <ul class="list">
+                <li class="inside_city">
+                    <a href="" class="intro_link">Клиент</a>
+                </li>
+                <li class="between_city">
+                    <a href="" class="intro_link">Предоставляющий услугу</a></li>
+                </ul>
+                <div class="main_inner">
+                        <div class="div_form">
+                            <form id="Registration" class="form_reg">
+                                 <div class="login">
+                                     <input type="text" class="input_number" id="login" name="login" placeholder="Номер телефона">
+                                 </div>
+                                 <div class="name">
+                                     <input type="text" class="input_name" id="name" name="name" placeholder="Имя">
+                                 </div>
+                                 <div class="sname">
+                                     <input type="text" class="input_sname" id="sname" name="sname" placeholder="Фамилия">
+                                 </div>
+                                 <div class="pname">
+                                     <input type="text" class="input_pname" id="pname" name="pname" placeholder="Отчество">
+                                 </div>
+                                 <div class="email">
+                                     <input type="text" class="input_email" id="email" name="email" placeholder="Почта">
+                                 </div>
+                                 <div class="password">
+                                     <input type="password" class="input_password" id="pass" name="pass" placeholder="Пароль">
+                                 </div>
+                                 <div class="repassword">
+                                     <input type="password" class="input_repassword" id="repass" name="repass" placeholder="Подтвердите пароль">
+                                 </div>
+                                <div class="div_error">
+                                    <h3 class="error">
+                                        {{errorreg}}
+                                    </h3>
+                                </div>
+                                 <button class="reg_button" ng-click="reg()" type="submit">
+                                     <span>Зарегистрироваться</span>
+                                 </button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

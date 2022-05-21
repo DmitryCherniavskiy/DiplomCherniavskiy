@@ -1,0 +1,19 @@
+2022-05-21 23:42:41 INFO  Application:55 - Starting Application using Java 15.0.1 on LAPTOP-JRE6EBBO with PID 18052 (C:\Users\dimka\OneDrive\Рабочий стол\DiplomCherniavskiy\target\classes started by dimka in C:\Users\dimka\OneDrive\Рабочий стол\DiplomCherniavskiy)
+2022-05-21 23:42:41 INFO  Application:664 - No active profile set, falling back to default profiles: default
+2022-05-21 23:42:42 INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-21 23:42:42 INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 91 ms. Found 6 JPA repository interfaces.
+2022-05-21 23:42:42 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8443 (https)
+2022-05-21 23:42:43 INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 1654 ms
+2022-05-21 23:42:43 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-21 23:42:43 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-05-21 23:42:43 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-21 23:42:43 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2022-05-21 23:42:43 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2022-05-21 23:42:43 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2022-05-21 23:42:45 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-21 23:42:45 INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-21 23:42:45 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-21 23:42:46 INFO  DefaultSecurityFilterChain:51 - Will secure Ant [pattern='/resources/**'] with []
+2022-05-21 23:42:46 INFO  DefaultSecurityFilterChain:51 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@723c5f86, org.springframework.security.web.context.SecurityContextPersistenceFilter@8c3b634, org.springframework.security.web.header.HeaderWriterFilter@3da61af2, org.springframework.security.web.csrf.CsrfFilter@48b9773b, org.springframework.security.web.authentication.logout.LogoutFilter@49338f3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@71458178, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e27bb89, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dbb8da0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@301e5d23, org.springframework.security.web.session.SessionManagementFilter@417751d3, org.springframework.security.web.access.ExceptionTranslationFilter@1e54e900, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bf52f10]
+2022-05-21 23:42:47 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8443 (https) with context path ''
+2022-05-21 23:42:47 INFO  Application:61 - Started Application in 6.442 seconds (JVM running for 7.26)

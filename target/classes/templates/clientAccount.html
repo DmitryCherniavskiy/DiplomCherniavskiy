@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/clientAccount.css" media="screen" th:href="@{/css/clientAccount.css}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>PerChill</title>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/clientAccount.js"></script>
+</head>
+<body ng-app="client" ng-controller="ClientController">
+<header class="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo">
+                <a class="header_link" href="#">PerChill</a>
+            </div>
+            <nav class="nav">
+                <a class="header_link" href="#">Профиль</a>
+                <a class="header_link" href="#">Язык</a>
+                <a class="header_link" href="#">Другое</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro_inner">
+            <h1 class="find_title">Личный профиль</h1>
+            <div class="main">
+                <h2 class="personal_title">Персональные данные</h2>
+                <div class="main_inner">
+                        <div class="div_form">
+                            <div class="avatar">
+                                <h2 class="avatar_title">Фото</h2>
+                            </div>
+                            <div class="personal_data">
+                                <div class="data">
+                                    <a class="category_data">Имя:</a>
+                                    <a class="category_data">Фамилия:</a>
+                                    <a class="category_data">Отчество:</a>
+                                    <a class="category_data">Почта:</a>
+                                    <a class="category_data">Телефон:</a>
+                                    <a class="category_data">Тип аккаунта:</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="orders" ng-controller="getOrders" ng-show="orders.length > 0">
+                    <h2 class="personal_title">Заказы</h2>
+                    <div class="order" ng-repeat="order in orders" id="{{order.id}}">
+                        <div class="order_info">
+                            <a class="category_order1">Дата создания заказа: {{order.date}}</a>
+                            <a class="category_order1">Дата отправления: {{order.date_start}}</a>
+                            <a class="category_order1">Откуда: {{order.start_place}}</a>
+                            <a class="category_order1">Куда: {{order.end_place}}</a>
+                        </div>
+                        <a class="category_order2">Исполнитель: {{order.to.name + ' ' + order.to.sname + order.to.pname}}</a>
+                        <div class="feedback"></div>
+                        <a class="category_order2">Стоимость: {{order.price}}</a>
+                        <button class="feedback_button">
+                            <span>Оставить отзыв</span>
+                        </button>
+                    </div>
+                </div>
+
+                <h2 class="personal_title">Избранное</h2>
+                <div class="orders">
+                       <div class="order">
+                            <div class="order_inner">
+                                    <div class="image">
+                                        <a href="#"><img class="image" src="https://mobimg.b-cdn.net/v3/fetch/a4/a48610bf58b05618a5470c6da6ecde49.jpeg" alt=""></a>
+                                    </div>
+                                    <div class="description">
+                                        <div class="name_grade">
+                                            <h3 class="name">
+                                                Чернявский Святослав Олегович
+                                            </h3>
+                                            <div class="grade">
+                                                <div class="review">
+                                                    999 отзывов
+                                                </div>
+                                                <div class="grade_number">
+                                                    8.1
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main_desc">
+                                            Предоставляю услуги перевозок как по городу так и межгород. Имеются автобусы разной вместительности и разного класса.
+                                        </div>
+                                    </div>
+                                </div>
+                         </div>
+                   </div>
+                   </div>
+           </div>
+        </div>
+    </div>
+
+</body>
+</html>
